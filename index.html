@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Privee Milling LLC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;font-family:Arial;background:#050505;color:white}
+header{padding:20px;background:#000;border-bottom:2px solid #ffd000;position:sticky;top:0}
+.logo{font-size:24px;font-weight:900;color:#ffd000}
+nav a{color:white;margin-right:15px;text-decoration:none;font-weight:bold}
+.hero{padding:80px 25px;background:linear-gradient(135deg,#050505,#1b1b1b)}
+.badge{color:#ffd000;font-weight:900;letter-spacing:2px}
+h1{font-size:52px;line-height:.95;margin:15px 0}
+p{color:#ccc;font-size:18px}
+.btn{display:inline-block;margin:10px 10px 10px 0;padding:14px 22px;border-radius:50px;background:#ffd000;color:#000;text-decoration:none;font-weight:900}
+.btn2{background:transparent;color:#ffd000;border:2px solid #ffd000}
+section{padding:65px 25px;max-width:1100px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#151515;border:1px solid #333;border-top:5px solid #ffd000;border-radius:18px;padding:25px}
+.card h3{color:#ffd000}
+.area span{display:inline-block;background:#151515;border:1px solid #ffd000;border-radius:50px;padding:12px 18px;margin:8px;font-weight:bold}
+form{display:grid;gap:15px;background:#151515;padding:25px;border-radius:18px}
+input,textarea{padding:14px;border-radius:10px;border:1px solid #444;background:#050505;color:white;font-size:16px}
+textarea{height:130px}
+footer{text-align:center;padding:30px;background:#000;color:#aaa}
+@media(max-width:600px){h1{font-size:38px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Privee Milling LLC</div>
+<nav>
+<a href="#services">Services</a>
+<a href="#areas">Areas</a>
+<a href="#about">About</a>
+<a href="#quote">Quote</a>
+</nav>
+</header>
+
+<div class="hero">
+<p class="badge">BROTHER-OWNED ASPHALT MILLING SUBCONTRACTORS</p>
+<h1>Reliable Milling Support for Contractors Across the Southeast.</h1>
+<p>Privee Milling LLC provides asphalt milling subcontractor support for paving companies, general contractors, commercial projects, parking lots, roadways, and resurfacing crews.</p>
+<a class="btn" href="tel:+14704956962">Call +1 (470) 495-6962</a>
+<a class="btn btn2" href="#quote">Request a Quote</a>
+</div>
+
+<section id="services">
+<p class="badge">OUR SERVICES</p>
+<h2>Built for contractors who need dependable milling support.</h2>
+<div class="grid">
+<div class="card"><h3>Asphalt Milling</h3><p>Professional milling support for paving prep, resurfacing, removals, and roadway work.</p></div>
+<div class="card"><h3>Parking Lot Milling</h3><p>Support for plazas, warehouses, commercial lots, apartments, and private properties.</p></div>
+<div class="card"><h3>Roadway Projects</h3><p>Subcontractor support for roads, patch prep, lane work, and paving crews.</p></div>
+<div class="card"><h3>Contractor Support</h3><p>Extra milling capacity when your company needs another reliable team on schedule.</p></div>
+</div>
+</section>
+
+<section id="areas">
+<p class="badge">SERVICE AREAS</p>
+<h2>Serving the Southeast</h2>
+<p>We are available for subcontractor milling work across:</p>
+<div class="area">
+<span>Georgia</span>
+<span>North Carolina</span>
+<span>South Carolina</span>
+<span>Florida</span>
+<span>Tennessee</span>
+<span>Alabama</span>
+</div>
+</section>
+
+<section id="about">
+<p class="badge">ABOUT US</p>
+<h2>Brother-owned. Contractor-focused. Built to work.</h2>
+<p>Privee Milling LLC was created by brothers with a focus on dependable asphalt milling subcontractor support. We understand that contractors need communication, timing, and crews that take the job seriously.</p>
+<p>From commercial parking lots to roadway milling support, our goal is to help paving crews stay on schedule and deliver a clean, professional result.</p>
+</section>
+
+<section>
+<p class="badge">WHY CONTRACTORS CALL US</p>
+<div class="grid">
+<div class="card"><h3>Reliable Communication</h3><p>Clear project details, jobsite expectations, and scheduling.</p></div>
+<div class="card"><h3>Regional Availability</h3><p>Available across multiple Southeast states.</p></div>
+<div class="card"><h3>Subcontractor Mindset</h3><p>We support your project and help your crew keep moving.</p></div>
+</div>
+</section>
+
+<section id="quote">
+<p class="badge">GET A QUOTE</p>
+<h2>Tell us about your next milling project.</h2>
+<p>Call, text, or email us with your project location, square footage, milling depth, timeline, and job details.</p>
+
+<form name="quote" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="quote">
+<input name="name" placeholder="Your name" required>
+<input name="company" placeholder="Company name">
+<input name="phone" placeholder="Phone number" required>
+<input name="email" placeholder="Email address">
+<input name="location" placeholder="Project location">
+<textarea name="details" placeholder="Project details"></textarea>
+<button class="btn" type="submit">Send Quote Request</button>
+</form>
+
+<p><b>Phone:</b> <a style="color:#ffd000" href="tel:+14704956962">+1 (470) 495-6962</a></p>
+<p><b>Email:</b> <a style="color:#ffd000" href="mailto:priveemilling@gmail.com">priveemilling@gmail.com</a></p>
+</section>
+
+<footer>
+<p>© 2026 Privee Milling LLC. All rights reserved.</p>
+<p>Asphalt Milling Subcontractors | Georgia • The Carolinas • Florida • Tennessee • Alabama</p>
+</footer>
+
+</body>
+</html>
