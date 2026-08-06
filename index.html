@@ -1,178 +1,790 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Privee Milling LLC</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{margin:0;font-family:Arial;background:#050505;color:white}
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 20px;
-background:#000;
-border-bottom:2px solid #ffd000;
-position:sticky;
-top:0;
-z-index:1000;
-}
-.logo{
-display:flex;
-align-items:center;
-}
+  <meta charset="UTF-8">
 
-.logo img{
-height:110px;
-width:auto;
-display:block;
-}
-nav a{color:white;margin-right:15px;text-decoration:none;font-weight:bold}
-.hero{
-padding:120px 25px;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url("ChatGPT%20Image%20Aug%205,%202026%20at%2009_14_53%20PM.png");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-min-height:70vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-.badge{color:#ffd000;font-weight:900;letter-spacing:2px}
-h1{
-font-size:68px;
-line-height:1;
-margin:15px 0;
-max-width:700px;
-}
-p{
-color:#ccc;
-font-size:18px;
-max-width:700px;
-line-height:1.6;
-}
-.btn{
-display:inline-block;
-width:fit-content;
-margin:10px 10px 10px 0;
-padding:14px 22px;
-border-radius:50px;
-background:#ffd000;
-color:#000;
-text-decoration:none;
-font-weight:900;
-}
-.btn2{background:transparent;color:#ffd000;border:2px solid #ffd000}
-section{padding:65px 25px;max-width:1100px;margin:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:#151515;border:1px solid #333;border-top:5px solid #ffd000;border-radius:18px;padding:25px}
-.card h3{color:#ffd000}
-.area span{display:inline-block;background:#151515;border:1px solid #ffd000;border-radius:50px;padding:12px 18px;margin:8px;font-weight:bold}
-form{display:grid;gap:15px;background:#151515;padding:25px;border-radius:18px}
-input,textarea{padding:14px;border-radius:10px;border:1px solid #444;background:#050505;color:white;font-size:16px}
-textarea{height:130px}
-footer{text-align:center;padding:30px;background:#000;color:#aaa}
-.hero-buttons{
-display:flex;
-gap:18px;
-flex-wrap:wrap;
-margin-top:15px;
-align-items:center;
-}  
-@media(max-width:600px){h1{font-size:38px}}
-</style>
+  <title>Privee Milling LLC | Asphalt Milling Subcontractors</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Privee Milling LLC provides professional asphalt milling subcontractor support for paving contractors, commercial developments, parking lots, municipal roadways, and resurfacing projects across the Southeast."
+  >
+
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#050505;
+      color:#fff;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:30px;
+      padding:14px 24px;
+      background:rgba(0,0,0,.96);
+      border-bottom:2px solid #ffd000;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      flex-shrink:0;
+    }
+
+    .logo img{
+      height:105px;
+      width:auto;
+      display:block;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:30px;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:17px;
+      transition:.25s;
+    }
+
+    nav a:hover{
+      color:#ffd000;
+    }
+
+    .hero{
+      min-height:78vh;
+      padding:100px 25px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.92) 0%,
+          rgba(0,0,0,.73) 45%,
+          rgba(0,0,0,.32) 100%
+        ),
+        url("ChatGPT%20Image%20Aug%205,%202026%20at%2009_14_53%20PM.png");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    .hero-content{
+      width:100%;
+      max-width:1150px;
+      margin:0 auto;
+    }
+
+    .badge{
+      margin:0;
+      color:#ffd000;
+      font-size:15px;
+      font-weight:900;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    h1{
+      max-width:760px;
+      margin:16px 0 20px;
+      font-size:68px;
+      line-height:1;
+      letter-spacing:-2px;
+    }
+
+    h2{
+      margin:10px 0 18px;
+      font-size:38px;
+      line-height:1.15;
+    }
+
+    p{
+      max-width:720px;
+      color:#cfcfcf;
+      font-size:18px;
+      line-height:1.65;
+    }
+
+    .hero-text{
+      max-width:760px;
+      font-size:19px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:14px;
+      margin-top:25px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:fit-content;
+      min-height:52px;
+      padding:14px 24px;
+      border:2px solid #ffd000;
+      border-radius:50px;
+      background:#ffd000;
+      color:#000;
+      text-decoration:none;
+      font-weight:900;
+      font-size:16px;
+      cursor:pointer;
+      transition:.25s;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 24px rgba(255,208,0,.25);
+    }
+
+    .btn2{
+      background:rgba(0,0,0,.25);
+      color:#ffd000;
+    }
+
+    .btn2:hover{
+      background:#ffd000;
+      color:#000;
+    }
+
+    .trust-bar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px 28px;
+      margin-top:30px;
+      color:#fff;
+      font-size:16px;
+      font-weight:700;
+    }
+
+    .trust-bar span{
+      display:flex;
+      align-items:center;
+    }
+
+    section{
+      width:100%;
+      max-width:1150px;
+      margin:auto;
+      padding:75px 25px;
+    }
+
+    .section-dark{
+      max-width:none;
+      background:#0d0d0d;
+    }
+
+    .section-dark-inner{
+      width:100%;
+      max-width:1150px;
+      margin:auto;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(235px,1fr));
+      gap:22px;
+      margin-top:30px;
+    }
+
+    .card{
+      padding:28px;
+      background:#151515;
+      border:1px solid #303030;
+      border-top:5px solid #ffd000;
+      border-radius:18px;
+      transition:.25s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:#ffd000;
+    }
+
+    .card h3{
+      margin-top:0;
+      color:#ffd000;
+      font-size:22px;
+    }
+
+    .card p{
+      margin-bottom:0;
+      font-size:16px;
+    }
+
+    .area{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:25px;
+    }
+
+    .area span{
+      display:inline-block;
+      padding:12px 19px;
+      background:#151515;
+      border:1px solid #ffd000;
+      border-radius:50px;
+      font-weight:700;
+    }
+
+    .contact-strip{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .contact-box{
+      padding:22px;
+      background:#151515;
+      border:1px solid #333;
+      border-radius:16px;
+    }
+
+    .contact-box strong{
+      display:block;
+      margin-bottom:8px;
+      color:#ffd000;
+    }
+
+    .contact-box a{
+      color:#fff;
+      text-decoration:none;
+      overflow-wrap:anywhere;
+    }
+
+    form{
+      display:grid;
+      gap:16px;
+      margin-top:30px;
+      padding:28px;
+      background:#151515;
+      border:1px solid #333;
+      border-radius:18px;
+    }
+
+    .form-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      padding:15px;
+      border:1px solid #444;
+      border-radius:10px;
+      outline:none;
+      background:#050505;
+      color:#fff;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:16px;
+    }
+
+    input:focus,
+    textarea:focus{
+      border-color:#ffd000;
+    }
+
+    textarea{
+      min-height:150px;
+      resize:vertical;
+    }
+
+    form .btn{
+      border:none;
+    }
+
+    footer{
+      padding:42px 25px;
+      background:#000;
+      border-top:2px solid #ffd000;
+      text-align:center;
+    }
+
+    footer p{
+      max-width:none;
+      margin:8px auto;
+      color:#999;
+      font-size:15px;
+    }
+
+    footer a{
+      color:#ffd000;
+      text-decoration:none;
+    }
+
+    @media(max-width:800px){
+      header{
+        flex-direction:column;
+        gap:8px;
+        padding:12px 18px 16px;
+      }
+
+      .logo img{
+        height:85px;
+      }
+
+      nav{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:12px 20px;
+      }
+
+      nav a{
+        font-size:15px;
+      }
+
+      .hero{
+        min-height:72vh;
+        padding:80px 22px;
+        background-position:62% center;
+      }
+
+      h1{
+        max-width:650px;
+        font-size:50px;
+      }
+
+      h2{
+        font-size:32px;
+      }
+    }
+
+    @media(max-width:600px){
+      .logo img{
+        height:75px;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:75px 20px;
+        background:
+          linear-gradient(
+            rgba(0,0,0,.82),
+            rgba(0,0,0,.75)
+          ),
+          url("ChatGPT%20Image%20Aug%205,%202026%20at%2009_14_53%20PM.png");
+        background-size:cover;
+        background-position:center;
+      }
+
+      h1{
+        font-size:40px;
+        letter-spacing:-1px;
+      }
+
+      h2{
+        font-size:29px;
+      }
+
+      p,
+      .hero-text{
+        font-size:16px;
+      }
+
+      .hero-buttons{
+        align-items:stretch;
+      }
+
+      .hero-buttons .btn{
+        width:100%;
+      }
+
+      .trust-bar{
+        flex-direction:column;
+        gap:11px;
+        font-size:15px;
+      }
+
+      section{
+        padding:60px 20px;
+      }
+
+      .form-row{
+        grid-template-columns:1fr;
+      }
+
+      form{
+        padding:22px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-<div class="logo">
-  <img src="ChatGPT%20Image%20Aug%205,%202026%20at%2006_07_15%20PM.png"
-       alt="Privee Milling LLC Logo"
-       style="height:70px;">
-</div>
-<nav class="nav">
-<a href="#services">Services</a>
-<a href="#areas">Areas</a>
-<a href="#about">About</a>
-<a href="#quote">Quote</a>
-</nav>
-</header>
+  <header>
+    <div class="logo">
+      <img
+        src="ChatGPT%20Image%20Aug%205,%202026%20at%2006_07_15%20PM.png"
+        alt="Privee Milling LLC logo"
+      >
+    </div>
 
-<div class="hero">
-<p class="badge">BROTHER-OWNED ASPHALT MILLING SUBCONTRACTORS</p>
-<h1>Professional Asphalt Milling Support for Contractors Across the Southeast.</h1>
-<p>Privee Milling LLC provides professional asphalt milling subcontractor support for paving contractors, general contractors, commercial developments, municipal roadways, parking lots, and resurfacing projects throughout the Southeast.</p>
-<div class="hero-buttons">
-  <a class="btn" href="tel:+14049870653">Call (404) 987-0653</a>
-  <a class="btn btn2" href="#quote">Request a Quote</a>
-</div>
-</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#areas">Areas</a>
+      <a href="#about">About</a>
+      <a href="#quote">Quote</a>
+    </nav>
+  </header>
 
-<section id="services">
-<p class="badge">OUR SERVICES</p>
-<h2>Built for contractors who need dependable milling support.</h2>
-<div class="grid">
-<div class="card"><h3>Asphalt Milling</h3><p>Professional milling support for paving prep, resurfacing, removals, and roadway work.</p></div>
-<div class="card"><h3>Parking Lot Milling</h3><p>Support for plazas, warehouses, commercial lots, apartments, and private properties.</p></div>
-<div class="card"><h3>Roadway Projects</h3><p>Subcontractor support for roads, patch prep, lane work, and paving crews.</p></div>
-<div class="card"><h3>Contractor Support</h3><p>Extra milling capacity when your company needs another reliable team on schedule.</p></div>
-</div>
-</section>
+  <main>
 
-<section id="areas">
-<p class="badge">SERVICE AREAS</p>
-<h2>Serving the Southeast</h2>
-<p>We are available for subcontractor milling work across:</p>
-<div class="area">
-<span>Georgia</span>
-<span>North Carolina</span>
-<span>South Carolina</span>
-<span>Florida</span>
-<span>Tennessee</span>
-<span>Alabama</span>
-</div>
-</section>
+    <div class="hero">
+      <div class="hero-content">
 
-<section id="about">
-<p class="badge">ABOUT US</p>
-<h2>Brother-owned. Contractor-focused. Built to work.</h2>
-<p>Privee Milling LLC was created by brothers with a focus on dependable asphalt milling subcontractor support. We understand that contractors need communication, timing, and crews that take the job seriously.</p>
-<p>From commercial parking lots to roadway milling support, our goal is to help paving crews stay on schedule and deliver a clean, professional result.</p>
-</section>
+        <p class="badge">
+          Brother-Owned Asphalt Milling Subcontractors
+        </p>
 
-<section>
-<p class="badge">WHY CONTRACTORS CALL US</p>
-<div class="grid">
-<div class="card"><h3>Reliable Communication</h3><p>Clear project details, jobsite expectations, and scheduling.</p></div>
-<div class="card"><h3>Regional Availability</h3><p>Available across multiple Southeast states.</p></div>
-<div class="card"><h3>Subcontractor Mindset</h3><p>We support your project and help your crew keep moving.</p></div>
-</div>
-</section>
+        <h1>
+          Professional Asphalt Milling Support for Contractors Across the Southeast.
+        </h1>
 
-<section id="quote">
-<p class="badge">GET A QUOTE</p>
-<h2>Tell us about your next milling project.</h2>
-<p>Call, text, or email us with your project location, square footage, milling depth, timeline, and job details.</p>
-<form action="https://formspree.io/f/xjybvpyr" method="POST">
-<input name="name" placeholder="Your name" required>
-<input name="company" placeholder="Company name">
-<input type="tel" name="phone" placeholder="Phone number" required>
-<input type="email" name="email" placeholder="Email address" required>
-<input name="location" placeholder="Project location">
-<textarea name="details" placeholder="Project details"></textarea>
-<button class="btn" type="submit">Send Quote Request</button>
-</form>
+        <p class="hero-text">
+          Privee Milling LLC provides professional asphalt milling
+          subcontractor support for paving contractors, general contractors,
+          commercial developments, municipal roadways, parking lots, and
+          resurfacing projects throughout the Southeast.
+        </p>
 
-<p><b>Phone:</b> <a style="color:#ffd000" href="tel:+14704956962">+1 (404) 987-0653</a></p>
-<p><b>Email:</b> <a style="color:#ffd000" href="mailto:priveemilling@gmail.com">priveemilling@gmail.com</a></p>
-</section>
+        <div class="hero-buttons">
+          <a class="btn" href="tel:+14049870653">
+            Call (404) 987-0653
+          </a>
 
-<footer>
-<p>© 2026 Privee Milling LLC. All rights reserved.</p>
-<p>Asphalt Milling Subcontractors | Georgia • The Carolinas • Florida • Tennessee • Alabama</p>
-</footer>
+          <a class="btn btn2" href="#quote">
+            Request a Quote
+          </a>
+        </div>
+
+        <div class="trust-bar">
+          <span>✓ Serving GA • FL • AL • TN • NC • SC</span>
+          <span>✓ Fast Quote Response</span>
+          <span>✓ Contractor-Focused Support</span>
+        </div>
+
+      </div>
+    </div>
+
+    <section id="services">
+
+      <p class="badge">Our Services</p>
+
+      <h2>
+        Built for contractors who need dependable milling support.
+      </h2>
+
+      <p>
+        We support paving and construction teams with professional asphalt
+        milling services for commercial, roadway, municipal, and resurfacing
+        projects.
+      </p>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Asphalt Milling</h3>
+          <p>
+            Professional milling support for paving preparation, resurfacing,
+            pavement removal, and roadway work.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Parking Lot Milling</h3>
+          <p>
+            Milling support for shopping centers, warehouses, commercial lots,
+            apartment communities, and private properties.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Roadway Projects</h3>
+          <p>
+            Subcontractor support for roadways, lane work, patch preparation,
+            resurfacing, and paving crews.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Contractor Support</h3>
+          <p>
+            Additional milling support when your company needs dependable
+            capacity to help keep a project on schedule.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="section-dark-inner">
+
+        <p class="badge">Why Contractors Choose Privee</p>
+
+        <h2>
+          Professional support built around your project.
+        </h2>
+
+        <div class="grid">
+
+          <div class="card">
+            <h3>Dependable Scheduling</h3>
+            <p>
+              We coordinate around project timelines and jobsite expectations
+              to help your paving operation stay productive.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Clear Communication</h3>
+            <p>
+              Straightforward communication before, during, and after the work
+              helps avoid delays and confusion.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Regional Availability</h3>
+            <p>
+              Available to support contractors across Georgia and multiple
+              surrounding Southeastern states.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Subcontractor Focus</h3>
+            <p>
+              Our role is to support your company, your schedule, and the
+              successful completion of your project.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="areas">
+
+      <p class="badge">Service Areas</p>
+
+      <h2>Serving the Southeast</h2>
+
+      <p>
+        Privee Milling LLC is available for asphalt milling subcontractor
+        opportunities across:
+      </p>
+
+      <div class="area">
+        <span>Georgia</span>
+        <span>Florida</span>
+        <span>Alabama</span>
+        <span>Tennessee</span>
+        <span>North Carolina</span>
+        <span>South Carolina</span>
+      </div>
+
+    </section>
+
+    <section id="about" class="section-dark">
+      <div class="section-dark-inner">
+
+        <p class="badge">About Us</p>
+
+        <h2>
+          Brother-owned. Contractor-focused. Built to work.
+        </h2>
+
+        <p>
+          Privee Milling LLC was created by brothers with a focus on dependable
+          asphalt milling subcontractor support. We understand that contractors
+          need clear communication, reliable scheduling, and crews that take
+          every job seriously.
+        </p>
+
+        <p>
+          From commercial parking lots to roadway milling support, our goal is
+          to help paving crews stay on schedule and deliver a clean,
+          professional result.
+        </p>
+
+      </div>
+    </section>
+
+    <section id="quote">
+
+      <p class="badge">Get a Quote</p>
+
+      <h2>Tell us about your next milling project.</h2>
+
+      <p>
+        Send us your project location, approximate square footage, milling
+        depth, timeline, and any other important job details.
+      </p>
+
+      <form
+        action="https://formspree.io/f/xjybvpyr"
+        method="POST"
+      >
+
+        <div class="form-row">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+          >
+
+          <input
+            type="text"
+            name="company"
+            placeholder="Company name"
+          >
+        </div>
+
+        <div class="form-row">
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone number"
+            required
+          >
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            required
+          >
+        </div>
+
+        <input
+          type="text"
+          name="location"
+          placeholder="Project location"
+          required
+        >
+
+        <div class="form-row">
+          <input
+            type="text"
+            name="square_footage"
+            placeholder="Approximate square footage"
+          >
+
+          <input
+            type="text"
+            name="milling_depth"
+            placeholder="Requested milling depth"
+          >
+        </div>
+
+        <input
+          type="text"
+          name="timeline"
+          placeholder="Preferred project date or timeline"
+        >
+
+        <textarea
+          name="details"
+          placeholder="Tell us about the project"
+          required
+        ></textarea>
+
+        <button class="btn" type="submit">
+          Send Quote Request
+        </button>
+
+      </form>
+
+      <div class="contact-strip">
+
+        <div class="contact-box">
+          <strong>Call or Text</strong>
+          <a href="tel:+14049870653">
+            (404) 987-0653
+          </a>
+        </div>
+
+        <div class="contact-box">
+          <strong>Email</strong>
+          <a href="mailto:priveemilling@gmail.com">
+            priveemilling@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-box">
+          <strong>Service Area</strong>
+          Georgia and the Southeast
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      <strong>Privee Milling LLC</strong>
+    </p>
+
+    <p>
+      Asphalt Milling Subcontractors
+    </p>
+
+    <p>
+      Georgia • Florida • Alabama • Tennessee • North Carolina • South Carolina
+    </p>
+
+    <p>
+      <a href="tel:+14049870653">(404) 987-0653</a>
+      •
+      <a href="mailto:priveemilling@gmail.com">
+        priveemilling@gmail.com
+      </a>
+    </p>
+
+    <p>
+      © 2026 Privee Milling LLC. All rights reserved.
+    </p>
+
+  </footer>
 
 </body>
 </html>
