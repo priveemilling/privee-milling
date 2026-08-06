@@ -3,16 +3,119 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-  <title>Privee Milling LLC | Asphalt Milling Subcontractors</title>
+  <title>
+    Privee Milling LLC | Asphalt Milling Subcontractors
+  </title>
 
   <meta
     name="description"
-    content="Privee Milling LLC provides professional asphalt milling subcontractor support for paving contractors, commercial developments, parking lots, municipal roadways, and resurfacing projects across the Southeast."
+    content="Privee Milling LLC provides professional asphalt milling subcontractor support for paving contractors, general contractors, commercial developments, parking lots, municipal roadways, and resurfacing projects across Georgia and the Southeast."
   >
 
+  <meta
+    name="keywords"
+    content="asphalt milling, asphalt milling contractor, milling subcontractor, parking lot milling, roadway milling, Georgia asphalt milling, Southeast asphalt milling, Privee Milling"
+  >
+
+  <meta name="author" content="Privee Milling LLC">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#ffd000">
+
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="ChatGPT%20Image%20Aug%205,%202026%20at%2006_07_15%20PM.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="ChatGPT%20Image%20Aug%205,%202026%20at%2006_07_15%20PM.png"
+  >
+
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:title"
+    content="Privee Milling LLC | Asphalt Milling Subcontractors"
+  >
+
+  <meta
+    property="og:description"
+    content="Professional asphalt milling subcontractor support for contractors across Georgia and the Southeast."
+  >
+
+  <meta
+    property="og:image"
+    content="ChatGPT%20Image%20Aug%205,%202026%20at%2009_14_53%20PM.png"
+  >
+
+  <meta property="og:site_name" content="Privee Milling LLC">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta
+    name="twitter:title"
+    content="Privee Milling LLC"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Professional asphalt milling support for contractors across the Southeast."
+  >
+
+  <meta
+    name="twitter:image"
+    content="ChatGPT%20Image%20Aug%205,%202026%20at%2009_14_53%20PM.png"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Privee Milling LLC",
+    "description": "Professional asphalt milling subcontractor support for paving contractors, general contractors, commercial developments, parking lots, roadways, and resurfacing projects.",
+    "telephone": "+1-404-987-0653",
+    "email": "priveemilling@gmail.com",
+    "areaServed": [
+      "Georgia",
+      "Florida",
+      "Alabama",
+      "Tennessee",
+      "North Carolina",
+      "South Carolina"
+    ],
+    "serviceType": [
+      "Asphalt Milling",
+      "Parking Lot Milling",
+      "Roadway Milling",
+      "Commercial Milling",
+      "Milling Subcontractor Support"
+    ]
+  }
+  </script>
+
   <style>
+    :root{
+      --yellow:#ffd000;
+      --black:#050505;
+      --dark:#0d0d0d;
+      --card:#151515;
+      --border:#303030;
+      --gray:#cfcfcf;
+      --muted:#999;
+      --radius:18px;
+      --max-width:1150px;
+    }
+
     *{
       box-sizing:border-box;
     }
@@ -23,14 +126,100 @@
 
     body{
       margin:0;
-      background:#050505;
+      overflow-x:hidden;
+      background:var(--black);
       color:#fff;
       font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body.lightbox-open{
+      overflow:hidden;
+    }
+
+    img{
+      max-width:100%;
     }
 
     a{
       transition:.25s ease;
     }
+
+    button,
+    input,
+    textarea{
+      font:inherit;
+    }
+
+    /* LOADING SCREEN */
+
+    #page-loader{
+      position:fixed;
+      inset:0;
+      z-index:10000;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:20px;
+      background:#000;
+      transition:
+        opacity .45s ease,
+        visibility .45s ease;
+    }
+
+    #page-loader.hidden{
+      opacity:0;
+      visibility:hidden;
+    }
+
+    .loader-logo{
+      width:170px;
+      height:auto;
+      animation:loaderPulse 1.25s ease-in-out infinite;
+    }
+
+    .loader-line{
+      width:180px;
+      height:4px;
+      overflow:hidden;
+      border-radius:20px;
+      background:#222;
+    }
+
+    .loader-line::after{
+      content:"";
+      display:block;
+      width:45%;
+      height:100%;
+      border-radius:20px;
+      background:var(--yellow);
+      animation:loaderMove 1s ease-in-out infinite;
+    }
+
+    @keyframes loaderPulse{
+      0%,
+      100%{
+        transform:scale(1);
+        opacity:.72;
+      }
+
+      50%{
+        transform:scale(1.04);
+        opacity:1;
+      }
+    }
+
+    @keyframes loaderMove{
+      from{
+        transform:translateX(-110%);
+      }
+
+      to{
+        transform:translateX(330%);
+      }
+    }
+
+    /* HEADER */
 
     header{
       position:sticky;
@@ -41,8 +230,9 @@
       justify-content:space-between;
       gap:30px;
       padding:12px 24px;
-      background:rgba(0,0,0,.97);
-      border-bottom:2px solid #ffd000;
+      border-bottom:2px solid var(--yellow);
+      background:rgba(0,0,0,.96);
+      backdrop-filter:blur(12px);
     }
 
     .logo{
@@ -60,19 +250,37 @@
     nav{
       display:flex;
       align-items:center;
-      gap:26px;
+      gap:22px;
     }
 
     nav a{
+      position:relative;
       color:#fff;
-      font-size:17px;
+      font-size:15px;
       font-weight:700;
       text-decoration:none;
     }
 
-    nav a:hover{
-      color:#ffd000;
+    nav a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-7px;
+      width:0;
+      height:2px;
+      background:var(--yellow);
+      transition:width .25s ease;
     }
+
+    nav a:hover{
+      color:var(--yellow);
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    /* HERO */
 
     .hero{
       min-height:78vh;
@@ -82,9 +290,9 @@
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,.94) 0%,
-          rgba(0,0,0,.77) 42%,
-          rgba(0,0,0,.28) 100%
+          rgba(0,0,0,.95) 0%,
+          rgba(0,0,0,.78) 43%,
+          rgba(0,0,0,.25) 100%
         ),
         url("ChatGPT%20Image%20Aug%205,%202026%20at%2009_14_53%20PM.png");
       background-size:cover;
@@ -94,13 +302,13 @@
 
     .hero-content{
       width:100%;
-      max-width:1150px;
+      max-width:var(--max-width);
       margin:auto;
     }
 
     .badge{
       margin:0;
-      color:#ffd000;
+      color:var(--yellow);
       font-size:15px;
       font-weight:900;
       letter-spacing:2px;
@@ -122,10 +330,14 @@
       line-height:1.15;
     }
 
+    h3{
+      line-height:1.25;
+    }
+
     p{
       max-width:720px;
       margin-top:0;
-      color:#ccc;
+      color:var(--gray);
       font-size:18px;
       line-height:1.65;
     }
@@ -150,28 +362,33 @@
       align-items:center;
       justify-content:center;
       padding:14px 24px;
-      border:2px solid #ffd000;
+      border:2px solid var(--yellow);
       border-radius:50px;
-      background:#ffd000;
+      background:var(--yellow);
       color:#000;
       font-size:16px;
       font-weight:900;
       text-decoration:none;
       cursor:pointer;
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease,
+        color .25s ease;
     }
 
     .btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 8px 24px rgba(255,208,0,.28);
+      transform:translateY(-3px);
+      box-shadow:0 10px 28px rgba(255,208,0,.28);
     }
 
     .btn2{
       background:rgba(0,0,0,.28);
-      color:#ffd000;
+      color:var(--yellow);
     }
 
     .btn2:hover{
-      background:#ffd000;
+      background:var(--yellow);
       color:#000;
     }
 
@@ -179,37 +396,84 @@
       display:flex;
       flex-wrap:wrap;
       gap:12px 28px;
-      margin-top:22px;
+      margin-top:24px;
       color:#fff;
       font-size:16px;
       font-weight:700;
     }
 
-    .trust-bar span{
-      display:flex;
-      align-items:center;
+    /* STATISTICS BAR */
+
+    .stats-section{
+      max-width:none;
+      padding:0 25px;
+      background:#000;
+      border-top:1px solid #252525;
+      border-bottom:1px solid #252525;
     }
+
+    .stats-grid{
+      width:100%;
+      max-width:var(--max-width);
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      margin:auto;
+    }
+
+    .stat{
+      min-height:150px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:28px 18px;
+      border-right:1px solid #252525;
+      text-align:center;
+    }
+
+    .stat:first-child{
+      border-left:1px solid #252525;
+    }
+
+    .stat-number{
+      display:block;
+      color:var(--yellow);
+      font-size:45px;
+      font-weight:900;
+      line-height:1;
+    }
+
+    .stat-label{
+      margin-top:9px;
+      color:#fff;
+      font-size:14px;
+      font-weight:800;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+
+    /* GENERAL SECTIONS */
 
     section{
       width:100%;
-      max-width:1150px;
+      max-width:var(--max-width);
       margin:auto;
       padding:75px 25px;
     }
 
     .full-section{
       max-width:none;
-      background:#0d0d0d;
+      background:var(--dark);
     }
 
     .section-inner{
       width:100%;
-      max-width:1150px;
+      max-width:var(--max-width);
       margin:auto;
     }
 
     .section-intro{
-      max-width:760px;
+      max-width:780px;
     }
 
     .grid{
@@ -222,27 +486,31 @@
     .card{
       min-height:100%;
       padding:28px;
-      background:#151515;
-      border:1px solid #303030;
-      border-top:5px solid #ffd000;
-      border-radius:18px;
-      transition:.25s ease;
+      border:1px solid var(--border);
+      border-top:5px solid var(--yellow);
+      border-radius:var(--radius);
+      background:var(--card);
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
     }
 
     .card:hover{
-      transform:translateY(-5px);
-      border-color:#ffd000;
+      transform:translateY(-6px);
+      border-color:var(--yellow);
+      box-shadow:0 18px 40px rgba(0,0,0,.35);
     }
 
     .card-number{
-      display:inline-flex;
       width:42px;
       height:42px;
+      display:inline-flex;
       align-items:center;
       justify-content:center;
       margin-bottom:18px;
       border-radius:50%;
-      background:#ffd000;
+      background:var(--yellow);
       color:#000;
       font-size:18px;
       font-weight:900;
@@ -250,7 +518,7 @@
 
     .card h3{
       margin:0 0 12px;
-      color:#ffd000;
+      color:var(--yellow);
       font-size:22px;
     }
 
@@ -258,6 +526,8 @@
       margin:0;
       font-size:16px;
     }
+
+    /* PROCESS */
 
     .process{
       display:grid;
@@ -269,14 +539,14 @@
     .process-step{
       position:relative;
       padding:28px;
-      background:#151515;
       border:1px solid #333;
-      border-radius:18px;
+      border-radius:var(--radius);
+      background:var(--card);
     }
 
     .process-step h3{
       margin:0 0 12px;
-      color:#ffd000;
+      color:var(--yellow);
       font-size:21px;
     }
 
@@ -284,6 +554,8 @@
       margin:0;
       font-size:16px;
     }
+
+    /* SERVICE AREA */
 
     .area{
       display:flex;
@@ -295,10 +567,16 @@
     .area span{
       display:inline-block;
       padding:12px 19px;
-      border:1px solid #ffd000;
+      border:1px solid var(--yellow);
       border-radius:50px;
-      background:#151515;
+      background:var(--card);
       font-weight:700;
+      transition:.25s ease;
+    }
+
+    .area span:hover{
+      background:var(--yellow);
+      color:#000;
     }
 
     /* PROJECT GALLERY */
@@ -307,77 +585,256 @@
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
       gap:24px;
-      margin-top:34px;
+      margin-top:36px;
     }
 
     .gallery-item{
       position:relative;
+      height:520px;
       overflow:hidden;
-      min-height:520px;
-      border:1px solid #303030;
-      border-radius:18px;
-      background:#151515;
-      box-shadow:0 12px 35px rgba(0,0,0,.28);
+      border:2px solid var(--border);
+      border-radius:20px;
+      background:var(--card);
+      cursor:pointer;
+      transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
     }
 
     .gallery-item img{
       width:100%;
       height:100%;
-      min-height:520px;
       display:block;
       object-fit:cover;
       transition:
-        transform .35s ease,
-        filter .35s ease;
+        transform .5s ease,
+        filter .5s ease;
     }
 
     .gallery-item::after{
       content:"";
       position:absolute;
       inset:0;
+      z-index:1;
       background:
         linear-gradient(
-          180deg,
-          rgba(0,0,0,0) 38%,
-          rgba(0,0,0,.84) 100%
+          to top,
+          rgba(0,0,0,.97) 0%,
+          rgba(0,0,0,.63) 25%,
+          rgba(0,0,0,.05) 60%,
+          transparent 100%
         );
       pointer-events:none;
     }
 
+    .gallery-item:hover{
+      transform:translateY(-6px);
+      border-color:var(--yellow);
+      box-shadow:0 18px 42px rgba(255,208,0,.16);
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.07);
+      filter:brightness(1.08);
+    }
+
     .gallery-caption{
       position:absolute;
-      left:22px;
-      right:22px;
-      bottom:20px;
+      left:24px;
+      right:24px;
+      bottom:22px;
       z-index:2;
     }
 
     .gallery-caption strong{
       display:block;
-      margin-bottom:6px;
-      color:#ffd000;
-      font-size:22px;
+      margin-bottom:7px;
+      color:var(--yellow);
+      font-size:23px;
     }
 
     .gallery-caption span{
       color:#fff;
-      font-size:15px;
+      font-size:16px;
       line-height:1.5;
     }
 
-    .gallery-item:hover img{
-      transform:scale(1.045);
-      filter:brightness(1.08);
+    .gallery-hint{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:14px;
     }
 
-    .gallery-item:hover{
-      border-color:#ffd000;
+    /* LIGHTBOX */
+
+    .lightbox{
+      position:fixed;
+      inset:0;
+      z-index:5000;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:25px;
+      background:rgba(0,0,0,.95);
     }
+
+    .lightbox.active{
+      display:flex;
+      animation:lightboxFade .25s ease;
+    }
+
+    .lightbox-content{
+      position:relative;
+      width:100%;
+      max-width:1200px;
+      max-height:90vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .lightbox img{
+      max-width:100%;
+      max-height:88vh;
+      object-fit:contain;
+      border:2px solid var(--yellow);
+      border-radius:14px;
+      box-shadow:0 20px 70px rgba(0,0,0,.65);
+    }
+
+    .lightbox-close{
+      position:absolute;
+      top:-20px;
+      right:-5px;
+      z-index:2;
+      width:48px;
+      height:48px;
+      border:2px solid var(--yellow);
+      border-radius:50%;
+      background:#000;
+      color:var(--yellow);
+      font-size:28px;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    @keyframes lightboxFade{
+      from{
+        opacity:0;
+      }
+
+      to{
+        opacity:1;
+      }
+    }
+
+    /* TESTIMONIALS */
+
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+      margin-top:34px;
+    }
+
+    .testimonial{
+      position:relative;
+      padding:30px;
+      border:1px solid #333;
+      border-radius:var(--radius);
+      background:var(--card);
+    }
+
+    .testimonial-mark{
+      color:var(--yellow);
+      font-size:56px;
+      font-weight:900;
+      line-height:.7;
+    }
+
+    .testimonial blockquote{
+      margin:22px 0;
+      color:#ddd;
+      font-size:17px;
+      font-style:italic;
+      line-height:1.65;
+    }
+
+    .testimonial-person{
+      padding-top:18px;
+      border-top:1px solid #333;
+    }
+
+    .testimonial-person strong{
+      display:block;
+      color:var(--yellow);
+    }
+
+    .testimonial-person span{
+      display:block;
+      margin-top:5px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .testimonial-placeholder{
+      color:#aaa;
+      font-style:normal;
+    }
+
+    .testimonial-note{
+      margin-top:22px;
+      color:#888;
+      font-size:14px;
+    }
+
+    /* MAP */
+
+    .map-layout{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:28px;
+      align-items:stretch;
+      margin-top:34px;
+    }
+
+    .map-info{
+      padding:30px;
+      border:1px solid #333;
+      border-radius:var(--radius);
+      background:var(--card);
+    }
+
+    .map-info h3{
+      margin-top:0;
+      color:var(--yellow);
+      font-size:26px;
+    }
+
+    .map-frame{
+      min-height:430px;
+      overflow:hidden;
+      border:2px solid #333;
+      border-radius:var(--radius);
+      background:#111;
+    }
+
+    .map-frame iframe{
+      width:100%;
+      height:100%;
+      min-height:430px;
+      display:block;
+      border:0;
+      filter:grayscale(1) invert(.9) contrast(.9);
+    }
+
+    /* CTA */
 
     .cta{
       max-width:none;
-      padding:60px 25px;
-      background:#ffd000;
+      padding:65px 25px;
+      background:var(--yellow);
       color:#000;
       text-align:center;
     }
@@ -394,28 +851,30 @@
 
     .cta p{
       max-width:760px;
-      margin:0 auto 22px;
+      margin:0 auto 24px;
       color:#181818;
     }
 
     .cta .btn{
-      background:#000;
       border-color:#000;
-      color:#ffd000;
+      background:#000;
+      color:var(--yellow);
     }
 
     .cta .btn:hover{
-      box-shadow:0 8px 24px rgba(0,0,0,.25);
+      box-shadow:0 10px 28px rgba(0,0,0,.25);
     }
+
+    /* FORM */
 
     form{
       display:grid;
       gap:16px;
       margin-top:30px;
       padding:28px;
-      background:#151515;
       border:1px solid #333;
-      border-radius:18px;
+      border-radius:var(--radius);
+      background:var(--card);
     }
 
     .form-row{
@@ -431,15 +890,15 @@
       border:1px solid #444;
       border-radius:10px;
       outline:none;
-      background:#050505;
+      background:var(--black);
       color:#fff;
-      font-family:Arial, Helvetica, sans-serif;
       font-size:16px;
     }
 
     input:focus,
     textarea:focus{
-      border-color:#ffd000;
+      border-color:var(--yellow);
+      box-shadow:0 0 0 2px rgba(255,208,0,.08);
     }
 
     textarea{
@@ -460,15 +919,15 @@
 
     .contact-box{
       padding:22px;
-      background:#151515;
       border:1px solid #333;
       border-radius:16px;
+      background:var(--card);
     }
 
     .contact-box strong{
       display:block;
       margin-bottom:8px;
-      color:#ffd000;
+      color:var(--yellow);
     }
 
     .contact-box a{
@@ -477,47 +936,179 @@
       overflow-wrap:anywhere;
     }
 
+    /* FOOTER */
+
     footer{
-      padding:45px 25px;
+      padding:55px 25px 30px;
+      border-top:2px solid var(--yellow);
       background:#000;
-      border-top:2px solid #ffd000;
-      text-align:center;
     }
 
-    footer p{
-      max-width:none;
-      margin:8px auto;
+    .footer-grid{
+      width:100%;
+      max-width:var(--max-width);
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr;
+      gap:40px;
+      margin:auto;
+    }
+
+    .footer-brand img{
+      width:210px;
+      height:auto;
+      display:block;
+      margin-bottom:15px;
+    }
+
+    .footer-brand p,
+    .footer-column p{
       color:#999;
       font-size:15px;
     }
 
-    footer a{
-      color:#ffd000;
+    .footer-column h3{
+      margin-top:0;
+      color:var(--yellow);
+      font-size:19px;
+    }
+
+    .footer-links{
+      display:grid;
+      gap:11px;
+    }
+
+    .footer-links a{
+      color:#ccc;
       text-decoration:none;
     }
 
-    @media(max-width:1000px){
+    .footer-links a:hover{
+      color:var(--yellow);
+    }
+
+    .social-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .social-link{
+      min-width:44px;
+      height:44px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 14px;
+      border:1px solid var(--yellow);
+      border-radius:50px;
+      color:var(--yellow);
+      font-size:14px;
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    .social-link:hover{
+      background:var(--yellow);
+      color:#000;
+    }
+
+    .footer-bottom{
+      width:100%;
+      max-width:var(--max-width);
+      margin:38px auto 0;
+      padding-top:24px;
+      border-top:1px solid #292929;
+      color:#777;
+      font-size:14px;
+      text-align:center;
+    }
+
+    /* SCROLL ANIMATIONS */
+
+    .reveal{
+      opacity:0;
+      transform:translateY(38px);
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .reveal-delay-1{
+      transition-delay:.08s;
+    }
+
+    .reveal-delay-2{
+      transition-delay:.16s;
+    }
+
+    .reveal-delay-3{
+      transition-delay:.24s;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1050px){
       nav{
-        gap:18px;
+        gap:15px;
       }
 
       nav a{
-        font-size:15px;
+        font-size:14px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .footer-brand{
+        grid-column:1 / -1;
       }
     }
 
     @media(max-width:900px){
+      h1{
+        font-size:52px;
+      }
+
       .process{
         grid-template-columns:repeat(2,1fr);
       }
 
-      h1{
-        font-size:52px;
+      .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .stat:nth-child(2){
+        border-right:none;
+      }
+
+      .stat:nth-child(3){
+        border-left:1px solid #252525;
+        border-top:1px solid #252525;
+      }
+
+      .stat:nth-child(4){
+        border-top:1px solid #252525;
+      }
+
+      .testimonials{
+        grid-template-columns:1fr;
+      }
+
+      .map-layout{
+        grid-template-columns:1fr;
       }
     }
 
     @media(max-width:800px){
       header{
+        position:relative;
         flex-direction:column;
         gap:8px;
         padding:10px 18px 16px;
@@ -532,10 +1123,6 @@
         justify-content:center;
         flex-wrap:wrap;
         gap:12px 18px;
-      }
-
-      nav a{
-        font-size:15px;
       }
 
       .hero{
@@ -557,9 +1144,8 @@
         grid-template-columns:1fr;
       }
 
-      .gallery-item,
-      .gallery-item img{
-        min-height:360px;
+      .gallery-item{
+        height:500px;
       }
     }
 
@@ -573,8 +1159,8 @@
         padding:72px 20px;
         background:
           linear-gradient(
-            rgba(0,0,0,.84),
-            rgba(0,0,0,.78)
+            rgba(0,0,0,.86),
+            rgba(0,0,0,.79)
           ),
           url("ChatGPT%20Image%20Aug%205,%202026%20at%2009_14_53%20PM.png");
         background-size:cover;
@@ -613,17 +1199,30 @@
         padding:60px 20px;
       }
 
+      .stats-section{
+        padding:0;
+      }
+
+      .stats-grid{
+        grid-template-columns:1fr;
+      }
+
+      .stat{
+        border-right:none;
+        border-left:none !important;
+        border-top:1px solid #252525;
+      }
+
+      .stat:first-child{
+        border-top:none;
+      }
+
       .process{
         grid-template-columns:1fr;
       }
 
-      .gallery{
-        gap:18px;
-      }
-
-      .gallery-item,
-      .gallery-item img{
-        min-height:280px;
+      .gallery-item{
+        height:360px;
       }
 
       .gallery-caption{
@@ -643,31 +1242,76 @@
       form{
         padding:22px;
       }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-brand{
+        grid-column:auto;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+      }
+
+      .reveal{
+        opacity:1;
+        transform:none;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- LOADING SCREEN -->
+
+  <div id="page-loader">
+    <img
+      class="loader-logo"
+      src="ChatGPT%20Image%20Aug%205,%202026%20at%2006_07_15%20PM.png"
+      alt="Loading Privee Milling LLC"
+    >
+
+    <div class="loader-line"></div>
+  </div>
+
+  <!-- HEADER -->
+
   <header>
     <div class="logo">
-      <img
-        src="ChatGPT%20Image%20Aug%205,%202026%20at%2006_07_15%20PM.png"
-        alt="Privee Milling LLC logo"
-      >
+      <a href="#top" aria-label="Privee Milling homepage">
+        <img
+          src="ChatGPT%20Image%20Aug%205,%202026%20at%2006_07_15%20PM.png"
+          alt="Privee Milling LLC logo"
+        >
+      </a>
     </div>
 
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#why-us">Why Us</a>
       <a href="#projects">Projects</a>
       <a href="#areas">Areas</a>
-      <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#quote">Quote</a>
     </nav>
   </header>
 
-  <main>
+  <main id="top">
+
+    <!-- HERO -->
 
     <div class="hero">
       <div class="hero-content">
@@ -706,7 +1350,73 @@
       </div>
     </div>
 
-    <section id="services">
+    <!-- ANIMATED STATISTICS -->
+
+    <section class="stats-section">
+      <div class="stats-grid">
+
+        <div class="stat">
+          <span
+            class="stat-number counter"
+            data-target="6"
+            data-suffix=""
+          >
+            0
+          </span>
+
+          <span class="stat-label">
+            Southeast States Served
+          </span>
+        </div>
+
+        <div class="stat">
+          <span
+            class="stat-number counter"
+            data-target="2"
+            data-suffix=""
+          >
+            0
+          </span>
+
+          <span class="stat-label">
+            Brother-Owners
+          </span>
+        </div>
+
+        <div class="stat">
+          <span
+            class="stat-number counter"
+            data-target="100"
+            data-suffix="%"
+          >
+            0
+          </span>
+
+          <span class="stat-label">
+            Contractor Focused
+          </span>
+        </div>
+
+        <div class="stat">
+          <span
+            class="stat-number counter"
+            data-target="24"
+            data-suffix="/7"
+          >
+            0
+          </span>
+
+          <span class="stat-label">
+            Online Quote Requests
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+
+    <section id="services" class="reveal">
 
       <div class="section-intro">
         <p class="badge">Our Services</p>
@@ -724,7 +1434,7 @@
 
       <div class="grid">
 
-        <div class="card">
+        <div class="card reveal reveal-delay-1">
           <div class="card-number">01</div>
 
           <h3>Asphalt Milling</h3>
@@ -735,7 +1445,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card reveal reveal-delay-2">
           <div class="card-number">02</div>
 
           <h3>Parking Lot Milling</h3>
@@ -746,7 +1456,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card reveal reveal-delay-3">
           <div class="card-number">03</div>
 
           <h3>Roadway Projects</h3>
@@ -757,7 +1467,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
           <div class="card-number">04</div>
 
           <h3>Contractor Support</h3>
@@ -771,8 +1481,10 @@
       </div>
     </section>
 
+    <!-- WHY US -->
+
     <section id="why-us" class="full-section">
-      <div class="section-inner">
+      <div class="section-inner reveal">
 
         <div class="section-intro">
           <p class="badge">
@@ -826,7 +1538,9 @@
       </div>
     </section>
 
-    <section>
+    <!-- PROCESS -->
+
+    <section class="reveal">
 
       <div class="section-intro">
         <p class="badge">Our Process</p>
@@ -885,8 +1599,10 @@
       </div>
     </section>
 
+    <!-- SERVICE AREAS -->
+
     <section id="areas" class="full-section">
-      <div class="section-inner">
+      <div class="section-inner reveal">
 
         <p class="badge">Service Areas</p>
 
@@ -911,7 +1627,9 @@
       </div>
     </section>
 
-    <section id="about">
+    <!-- ABOUT -->
+
+    <section id="about" class="reveal">
 
       <p class="badge">About Us</p>
 
@@ -934,16 +1652,16 @@
 
     </section>
 
-    <!-- PROJECT PHOTO SECTION -->
+    <!-- PROJECT GALLERY -->
 
     <section id="projects" class="full-section">
-      <div class="section-inner">
+      <div class="section-inner reveal">
 
         <div class="section-intro">
-          <p class="badge">Recent Projects</p>
+          <p class="badge">Our Work</p>
 
           <h2>
-            Asphalt milling work in action.
+            Asphalt milling projects in action.
           </h2>
 
           <p>
@@ -954,7 +1672,12 @@
 
         <div class="gallery">
 
-          <div class="gallery-item">
+          <article
+            class="gallery-item"
+            tabindex="0"
+            data-image="IMG_7662.jpeg"
+            aria-label="Open asphalt milling image"
+          >
             <img
               src="IMG_7662.jpeg"
               alt="Privee Milling asphalt milling project"
@@ -968,9 +1691,14 @@
                 Professional pavement removal and resurfacing preparation.
               </span>
             </div>
-          </div>
+          </article>
 
-          <div class="gallery-item">
+          <article
+            class="gallery-item"
+            tabindex="0"
+            data-image="IMG_7676.jpeg"
+            aria-label="Open roadway preparation image"
+          >
             <img
               src="IMG_7676.jpeg"
               alt="Milling machine working on pavement"
@@ -984,9 +1712,14 @@
                 Dependable support for paving crews and roadway projects.
               </span>
             </div>
-          </div>
+          </article>
 
-          <div class="gallery-item">
+          <article
+            class="gallery-item"
+            tabindex="0"
+            data-image="IMG_7679.jpeg"
+            aria-label="Open commercial milling image"
+          >
             <img
               src="IMG_7679.jpeg"
               alt="Commercial asphalt milling project"
@@ -1000,9 +1733,14 @@
                 Milling support for parking lots and commercial properties.
               </span>
             </div>
-          </div>
+          </article>
 
-          <div class="gallery-item">
+          <article
+            class="gallery-item"
+            tabindex="0"
+            data-image="IMG_7680.jpeg"
+            aria-label="Open project support image"
+          >
             <img
               src="IMG_7680.jpeg"
               alt="Completed asphalt milling work"
@@ -1016,32 +1754,158 @@
                 Contractor-focused service from scheduling through completion.
               </span>
             </div>
-          </div>
+          </article>
 
         </div>
+
+        <p class="gallery-hint">
+          Click any image to view it full screen.
+        </p>
+
       </div>
     </section>
 
-    <section class="cta">
-      <div class="cta-inner">
+    <!-- TESTIMONIALS -->
+
+    <section id="testimonials" class="reveal">
+
+      <div class="section-intro">
+        <p class="badge">Contractor Feedback</p>
 
         <h2>
-          Need milling support for an upcoming project?
+          Built for professional working relationships.
         </h2>
 
         <p>
-          Send us the project details or call today to discuss the location,
-          scope, depth, schedule, and availability.
+          Verified contractor testimonials will be added here as Privee
+          Milling completes projects and receives permission to publish
+          customer feedback.
+        </p>
+      </div>
+
+      <div class="testimonials">
+
+        <article class="testimonial">
+          <div class="testimonial-mark">“</div>
+
+          <blockquote class="testimonial-placeholder">
+            Add a verified testimonial from a paving contractor after
+            completing a project.
+          </blockquote>
+
+          <div class="testimonial-person">
+            <strong>Verified Client</strong>
+            <span>Paving Contractor</span>
+          </div>
+        </article>
+
+        <article class="testimonial">
+          <div class="testimonial-mark">“</div>
+
+          <blockquote class="testimonial-placeholder">
+            Add feedback about communication, scheduling, production, or
+            project support.
+          </blockquote>
+
+          <div class="testimonial-person">
+            <strong>Verified Client</strong>
+            <span>General Contractor</span>
+          </div>
+        </article>
+
+        <article class="testimonial">
+          <div class="testimonial-mark">“</div>
+
+          <blockquote class="testimonial-placeholder">
+            Add a real customer review only after receiving permission to
+            display it publicly.
+          </blockquote>
+
+          <div class="testimonial-person">
+            <strong>Verified Client</strong>
+            <span>Commercial Project Partner</span>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="testimonial-note">
+        Replace these placeholders only with real, verified customer feedback.
+      </p>
+
+    </section>
+
+    <!-- MAP -->
+
+    <section class="full-section">
+      <div class="section-inner reveal">
+
+        <div class="section-intro">
+          <p class="badge">Regional Coverage</p>
+
+          <h2>
+            Based in Georgia. Available across the Southeast.
+          </h2>
+        </div>
+
+        <div class="map-layout">
+
+          <div class="map-info">
+            <h3>Service Area</h3>
+
+            <p>
+              Privee Milling LLC supports contractors throughout Georgia,
+              Florida, Alabama, Tennessee, North Carolina, and South Carolina.
+            </p>
+
+            <p>
+              Contact us with the project location, scope, milling depth,
+              and requested timeline to discuss availability.
+            </p>
+
+            <a class="btn" href="#quote">
+              Check Project Availability
+            </a>
+          </div>
+
+          <div class="map-frame">
+            <iframe
+              title="Privee Milling Southeast service area"
+              src="https://www.google.com/maps?q=Atlanta%2C%20Georgia&z=6&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+      <div class="cta-inner reveal">
+
+        <h2>
+          Need reliable asphalt milling support?
+        </h2>
+
+        <p>
+          Send us your project details or call today to discuss location,
+          scope, milling depth, scheduling, and availability.
         </p>
 
         <a class="btn" href="#quote">
-          Request Your Quote
+          Request a Quote
         </a>
 
       </div>
     </section>
 
-    <section id="quote">
+    <!-- QUOTE FORM -->
+
+    <section id="quote" class="reveal">
 
       <p class="badge">Get a Quote</p>
 
@@ -1059,11 +1923,18 @@
         method="POST"
       >
 
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Privee Milling Quote Request"
+        >
+
         <div class="form-row">
           <input
             type="text"
             name="name"
             placeholder="Your name"
+            autocomplete="name"
             required
           >
 
@@ -1071,6 +1942,7 @@
             type="text"
             name="company"
             placeholder="Company name"
+            autocomplete="organization"
           >
         </div>
 
@@ -1079,6 +1951,7 @@
             type="tel"
             name="phone"
             placeholder="Phone number"
+            autocomplete="tel"
             required
           >
 
@@ -1086,6 +1959,7 @@
             type="email"
             name="email"
             placeholder="Email address"
+            autocomplete="email"
             required
           >
         </div>
@@ -1094,6 +1968,7 @@
           type="text"
           name="location"
           placeholder="Project location"
+          autocomplete="street-address"
           required
         >
 
@@ -1159,37 +2034,284 @@
 
   </main>
 
+  <!-- FOOTER -->
+
   <footer>
 
-    <p>
-      <strong>Privee Milling LLC</strong>
-    </p>
+    <div class="footer-grid">
 
-    <p>
-      Professional Asphalt Milling Subcontractor Support
-    </p>
+      <div class="footer-brand">
+        <img
+          src="ChatGPT%20Image%20Aug%205,%202026%20at%2006_07_15%20PM.png"
+          alt="Privee Milling LLC"
+        >
 
-    <p>
-      Georgia • Florida • Alabama • Tennessee • North Carolina • South Carolina
-    </p>
+        <p>
+          Professional asphalt milling subcontractor support for commercial,
+          roadway, parking lot, municipal, and resurfacing projects across
+          the Southeast.
+        </p>
 
-    <p>
-      <a href="tel:+14049870653">
-        (404) 987-0653
-      </a>
+        <div class="social-links">
 
-      •
+          <!-- Replace the Instagram link below with your exact profile URL. -->
 
-      <a href="mailto:priveemilling@gmail.com">
-        priveemilling@gmail.com
-      </a>
-    </p>
+          <a
+            class="social-link"
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
 
-    <p>
+          <a
+            class="social-link"
+            href="mailto:priveemilling@gmail.com"
+          >
+            Email
+          </a>
+
+          <a
+            class="social-link"
+            href="tel:+14049870653"
+          >
+            Call
+          </a>
+
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Company</h3>
+
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Privee</a>
+          <a href="#projects">Our Work</a>
+          <a href="#areas">Service Areas</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#quote">Request a Quote</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+
+        <p>
+          <a href="tel:+14049870653">
+            (404) 987-0653
+          </a>
+        </p>
+
+        <p>
+          <a href="mailto:priveemilling@gmail.com">
+            priveemilling@gmail.com
+          </a>
+        </p>
+
+        <p>
+          Serving Georgia, Florida, Alabama, Tennessee, North Carolina,
+          and South Carolina.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
       © 2026 Privee Milling LLC. All rights reserved.
-    </p>
+    </div>
 
   </footer>
+
+  <!-- LIGHTBOX -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Project image viewer"
+  >
+    <div class="lightbox-content">
+
+      <button
+        class="lightbox-close"
+        id="lightbox-close"
+        aria-label="Close image viewer"
+        type="button"
+      >
+        ×
+      </button>
+
+      <img
+        id="lightbox-image"
+        src=""
+        alt="Expanded project"
+      >
+
+    </div>
+  </div>
+
+  <script>
+    "use strict";
+
+    /*
+      PAGE LOADER
+    */
+
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("page-loader");
+
+      window.setTimeout(function () {
+        loader.classList.add("hidden");
+      }, 450);
+    });
+
+    /*
+      SCROLL REVEAL
+    */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold:0.12
+        }
+      );
+
+      revealElements.forEach(function (element) {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach(function (element) {
+        element.classList.add("visible");
+      });
+    }
+
+    /*
+      ANIMATED COUNTERS
+    */
+
+    const counters = document.querySelectorAll(".counter");
+    let countersStarted = false;
+
+    function animateCounters() {
+      if (countersStarted) {
+        return;
+      }
+
+      countersStarted = true;
+
+      counters.forEach(function (counter) {
+        const target = Number(counter.dataset.target);
+        const suffix = counter.dataset.suffix || "";
+        const duration = 1200;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easedProgress = 1 - Math.pow(1 - progress, 3);
+          const currentValue = Math.floor(target * easedProgress);
+
+          counter.textContent = currentValue + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target + suffix;
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+    }
+
+    const statsSection = document.querySelector(".stats-section");
+
+    if ("IntersectionObserver" in window && statsSection) {
+      const statsObserver = new IntersectionObserver(
+        function (entries, observer) {
+          if (entries[0].isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+          }
+        },
+        {
+          threshold:0.3
+        }
+      );
+
+      statsObserver.observe(statsSection);
+    } else {
+      animateCounters();
+    }
+
+    /*
+      PROJECT LIGHTBOX
+    */
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxClose = document.getElementById("lightbox-close");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    function openLightbox(imagePath, imageAlt) {
+      lightboxImage.src = imagePath;
+      lightboxImage.alt = imageAlt || "Expanded project image";
+      lightbox.classList.add("active");
+      document.body.classList.add("lightbox-open");
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      document.body.classList.remove("lightbox-open");
+      lightboxImage.src = "";
+    }
+
+    galleryItems.forEach(function (item) {
+      const image = item.querySelector("img");
+
+      item.addEventListener("click", function () {
+        openLightbox(item.dataset.image, image.alt);
+      });
+
+      item.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(item.dataset.image, image.alt);
+        }
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        lightbox.classList.contains("active")
+      ) {
+        closeLightbox();
+      }
+    });
+  </script>
 
 </body>
 </html>
