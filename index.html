@@ -91,11 +91,12 @@ footer{text-align:center;padding:30px;background:#000;color:#aaa}
 <p class="badge">GET A QUOTE</p>
 <h2>Tell us about your next milling project.</h2>
 <p>Call, text, or email us with your project location, square footage, milling depth, timeline, and job details.</p>
-<form action="mailto:priveemilling@gmail.com" method="POST" enctype="text/plain">
+<form name="quote-request" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="quote-request">
 <input name="name" placeholder="Your name" required>
 <input name="company" placeholder="Company name">
-<input name="phone" placeholder="Phone number" required>
-<input name="email" placeholder="Email address">
+<input type="tel" name="phone" placeholder="Phone number" required>
+<input type="email" name="email" placeholder="Email address" required>
 <input name="location" placeholder="Project location">
 <textarea name="details" placeholder="Project details"></textarea>
 <button class="btn" type="submit">Send Quote Request</button>
