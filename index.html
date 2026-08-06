@@ -60,7 +60,7 @@
     nav{
       display:flex;
       align-items:center;
-      gap:30px;
+      gap:26px;
     }
 
     nav a{
@@ -259,22 +259,6 @@
       font-size:16px;
     }
 
-    .area{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:25px;
-    }
-
-    .area span{
-      display:inline-block;
-      padding:12px 19px;
-      border:1px solid #ffd000;
-      border-radius:50px;
-      background:#151515;
-      font-weight:700;
-    }
-
     .process{
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -299,6 +283,95 @@
     .process-step p{
       margin:0;
       font-size:16px;
+    }
+
+    .area{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:25px;
+    }
+
+    .area span{
+      display:inline-block;
+      padding:12px 19px;
+      border:1px solid #ffd000;
+      border-radius:50px;
+      background:#151515;
+      font-weight:700;
+    }
+
+    /* PROJECT GALLERY */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:24px;
+      margin-top:34px;
+    }
+
+    .gallery-item{
+      position:relative;
+      overflow:hidden;
+      min-height:340px;
+      border:1px solid #303030;
+      border-radius:18px;
+      background:#151515;
+      box-shadow:0 12px 35px rgba(0,0,0,.28);
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      min-height:340px;
+      display:block;
+      object-fit:cover;
+      transition:
+        transform .35s ease,
+        filter .35s ease;
+    }
+
+    .gallery-item::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,0) 38%,
+          rgba(0,0,0,.84) 100%
+        );
+      pointer-events:none;
+    }
+
+    .gallery-caption{
+      position:absolute;
+      left:22px;
+      right:22px;
+      bottom:20px;
+      z-index:2;
+    }
+
+    .gallery-caption strong{
+      display:block;
+      margin-bottom:6px;
+      color:#ffd000;
+      font-size:22px;
+    }
+
+    .gallery-caption span{
+      color:#fff;
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.045);
+      filter:brightness(1.08);
+    }
+
+    .gallery-item:hover{
+      border-color:#ffd000;
     }
 
     .cta{
@@ -423,6 +496,16 @@
       text-decoration:none;
     }
 
+    @media(max-width:1000px){
+      nav{
+        gap:18px;
+      }
+
+      nav a{
+        font-size:15px;
+      }
+    }
+
     @media(max-width:900px){
       .process{
         grid-template-columns:repeat(2,1fr);
@@ -448,7 +531,7 @@
         width:100%;
         justify-content:center;
         flex-wrap:wrap;
-        gap:12px 20px;
+        gap:12px 18px;
       }
 
       nav a{
@@ -468,6 +551,15 @@
 
       h2{
         font-size:32px;
+      }
+
+      .gallery{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-item,
+      .gallery-item img{
+        min-height:360px;
       }
     }
 
@@ -525,6 +617,25 @@
         grid-template-columns:1fr;
       }
 
+      .gallery{
+        gap:18px;
+      }
+
+      .gallery-item,
+      .gallery-item img{
+        min-height:280px;
+      }
+
+      .gallery-caption{
+        left:18px;
+        right:18px;
+        bottom:17px;
+      }
+
+      .gallery-caption strong{
+        font-size:20px;
+      }
+
       .form-row{
         grid-template-columns:1fr;
       }
@@ -549,6 +660,7 @@
     <nav>
       <a href="#services">Services</a>
       <a href="#why-us">Why Us</a>
+      <a href="#projects">Projects</a>
       <a href="#areas">Areas</a>
       <a href="#about">About</a>
       <a href="#quote">Quote</a>
@@ -605,8 +717,8 @@
 
         <p>
           We support paving and construction companies with professional
-          asphalt milling services for commercial, roadway, municipal, parking
-          lot, and resurfacing projects.
+          asphalt milling services for commercial, roadway, municipal,
+          parking lot, and resurfacing projects.
         </p>
       </div>
 
@@ -614,7 +726,9 @@
 
         <div class="card">
           <div class="card-number">01</div>
+
           <h3>Asphalt Milling</h3>
+
           <p>
             Professional milling support for paving preparation, resurfacing,
             pavement removal, rehabilitation, and roadway work.
@@ -623,7 +737,9 @@
 
         <div class="card">
           <div class="card-number">02</div>
+
           <h3>Parking Lot Milling</h3>
+
           <p>
             Milling support for shopping centers, warehouses, commercial
             properties, apartment communities, and private lots.
@@ -632,7 +748,9 @@
 
         <div class="card">
           <div class="card-number">03</div>
+
           <h3>Roadway Projects</h3>
+
           <p>
             Subcontractor support for roadways, lane work, patch preparation,
             municipal projects, resurfacing, and paving crews.
@@ -641,7 +759,9 @@
 
         <div class="card">
           <div class="card-number">04</div>
+
           <h3>Contractor Support</h3>
+
           <p>
             Additional milling support when your company needs dependable
             production capacity to help keep a project moving.
@@ -655,7 +775,9 @@
       <div class="section-inner">
 
         <div class="section-intro">
-          <p class="badge">Why Contractors Choose Privee</p>
+          <p class="badge">
+            Why Contractors Choose Privee
+          </p>
 
           <h2>
             Professional support from the first call through project completion.
@@ -666,6 +788,7 @@
 
           <div class="card">
             <h3>Dependable Scheduling</h3>
+
             <p>
               We coordinate around project timelines, jobsite requirements,
               and paving schedules to help your operation stay productive.
@@ -674,14 +797,16 @@
 
           <div class="card">
             <h3>Clear Communication</h3>
+
             <p>
-              Straightforward updates before, during, and after the project help
-              reduce delays, confusion, and unnecessary downtime.
+              Straightforward updates before, during, and after the project
+              help reduce delays, confusion, and unnecessary downtime.
             </p>
           </div>
 
           <div class="card">
             <h3>Regional Availability</h3>
+
             <p>
               Available to support contractors across Georgia and multiple
               surrounding Southeastern states.
@@ -690,6 +815,7 @@
 
           <div class="card">
             <h3>Subcontractor Focus</h3>
+
             <p>
               Our role is to support your company, your schedule, and the
               successful completion of your paving or roadway project.
@@ -714,34 +840,42 @@
 
         <div class="process-step">
           <div class="card-number">1</div>
+
           <h3>Send Project Details</h3>
+
           <p>
-            Provide the location, square footage, milling depth, timeline, and
-            any jobsite requirements.
+            Provide the location, square footage, milling depth, timeline,
+            and any jobsite requirements.
           </p>
         </div>
 
         <div class="process-step">
           <div class="card-number">2</div>
+
           <h3>Review and Quote</h3>
+
           <p>
-            We review the project information and follow up regarding pricing,
-            scope, scheduling, and availability.
+            We review the project information and follow up regarding
+            pricing, scope, scheduling, and availability.
           </p>
         </div>
 
         <div class="process-step">
           <div class="card-number">3</div>
+
           <h3>Schedule the Work</h3>
+
           <p>
-            We coordinate timing and expectations with your team before the
-            project begins.
+            We coordinate timing and expectations with your team before
+            the project begins.
           </p>
         </div>
 
         <div class="process-step">
           <div class="card-number">4</div>
+
           <h3>Complete the Milling</h3>
+
           <p>
             The milling work is completed with a focus on communication,
             productivity, and supporting your project goals.
@@ -756,7 +890,9 @@
 
         <p class="badge">Service Areas</p>
 
-        <h2>Serving contractors across the Southeast.</h2>
+        <h2>
+          Serving contractors across the Southeast.
+        </h2>
 
         <p>
           Privee Milling LLC is available for asphalt milling subcontractor
@@ -798,10 +934,100 @@
 
     </section>
 
+    <!-- PROJECT PHOTO SECTION -->
+
+    <section id="projects" class="full-section">
+      <div class="section-inner">
+
+        <div class="section-intro">
+          <p class="badge">Recent Projects</p>
+
+          <h2>
+            Asphalt milling work in action.
+          </h2>
+
+          <p>
+            A look at active milling operations, roadway preparation, and
+            professional project support.
+          </p>
+        </div>
+
+        <div class="gallery">
+
+          <div class="gallery-item">
+            <img
+              src="IMG_7662.jpeg"
+              alt="Privee Milling asphalt milling project"
+              loading="lazy"
+            >
+
+            <div class="gallery-caption">
+              <strong>Asphalt Milling</strong>
+
+              <span>
+                Professional pavement removal and resurfacing preparation.
+              </span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="IMG_7676.jpeg"
+              alt="Milling machine working on pavement"
+              loading="lazy"
+            >
+
+            <div class="gallery-caption">
+              <strong>Roadway Preparation</strong>
+
+              <span>
+                Dependable support for paving crews and roadway projects.
+              </span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="IMG_7679.jpeg"
+              alt="Commercial asphalt milling project"
+              loading="lazy"
+            >
+
+            <div class="gallery-caption">
+              <strong>Commercial Projects</strong>
+
+              <span>
+                Milling support for parking lots and commercial properties.
+              </span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="IMG_7680.jpeg"
+              alt="Completed asphalt milling work"
+              loading="lazy"
+            >
+
+            <div class="gallery-caption">
+              <strong>Project Support</strong>
+
+              <span>
+                Contractor-focused service from scheduling through completion.
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <section class="cta">
       <div class="cta-inner">
 
-        <h2>Need milling support for an upcoming project?</h2>
+        <h2>
+          Need milling support for an upcoming project?
+        </h2>
 
         <p>
           Send us the project details or call today to discuss the location,
@@ -819,7 +1045,9 @@
 
       <p class="badge">Get a Quote</p>
 
-      <h2>Tell us about your next milling project.</h2>
+      <h2>
+        Tell us about your next milling project.
+      </h2>
 
       <p>
         Send your project location, approximate square footage, milling depth,
@@ -905,6 +1133,7 @@
 
         <div class="contact-box">
           <strong>Call or Text</strong>
+
           <a href="tel:+14049870653">
             (404) 987-0653
           </a>
@@ -912,6 +1141,7 @@
 
         <div class="contact-box">
           <strong>Email</strong>
+
           <a href="mailto:priveemilling@gmail.com">
             priveemilling@gmail.com
           </a>
@@ -919,6 +1149,7 @@
 
         <div class="contact-box">
           <strong>Service Area</strong>
+
           Georgia and the Southeast
         </div>
 
@@ -943,8 +1174,12 @@
     </p>
 
     <p>
-      <a href="tel:+14049870653">(404) 987-0653</a>
+      <a href="tel:+14049870653">
+        (404) 987-0653
+      </a>
+
       •
+
       <a href="mailto:priveemilling@gmail.com">
         priveemilling@gmail.com
       </a>
