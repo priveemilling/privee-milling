@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Privee Milling LLC | Asphalt Milling Subcontractors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+  <title>Privee Milling LLC | Asphalt Milling Subcontractors</title>
 
   <meta
     name="description"
@@ -26,22 +23,26 @@
 
     body{
       margin:0;
-      font-family:Arial, Helvetica, sans-serif;
       background:#050505;
       color:#fff;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    a{
+      transition:.25s ease;
     }
 
     header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:30px;
-      padding:14px 24px;
-      background:rgba(0,0,0,.96);
-      border-bottom:2px solid #ffd000;
       position:sticky;
       top:0;
       z-index:1000;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      padding:12px 24px;
+      background:rgba(0,0,0,.97);
+      border-bottom:2px solid #ffd000;
     }
 
     .logo{
@@ -51,9 +52,9 @@
     }
 
     .logo img{
-      height:105px;
-      width:auto;
       display:block;
+      width:auto;
+      height:105px;
     }
 
     nav{
@@ -64,10 +65,9 @@
 
     nav a{
       color:#fff;
-      text-decoration:none;
-      font-weight:700;
       font-size:17px;
-      transition:.25s;
+      font-weight:700;
+      text-decoration:none;
     }
 
     nav a:hover{
@@ -76,16 +76,15 @@
 
     .hero{
       min-height:78vh;
-      padding:100px 25px;
       display:flex;
-      flex-direction:column;
-      justify-content:center;
+      align-items:center;
+      padding:90px 25px;
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,.92) 0%,
-          rgba(0,0,0,.73) 45%,
-          rgba(0,0,0,.32) 100%
+          rgba(0,0,0,.94) 0%,
+          rgba(0,0,0,.77) 42%,
+          rgba(0,0,0,.28) 100%
         ),
         url("ChatGPT%20Image%20Aug%205,%202026%20at%2009_14_53%20PM.png");
       background-size:cover;
@@ -96,7 +95,7 @@
     .hero-content{
       width:100%;
       max-width:1150px;
-      margin:0 auto;
+      margin:auto;
     }
 
     .badge{
@@ -105,6 +104,7 @@
       font-size:15px;
       font-weight:900;
       letter-spacing:2px;
+      line-height:1.5;
       text-transform:uppercase;
     }
 
@@ -124,7 +124,8 @@
 
     p{
       max-width:720px;
-      color:#cfcfcf;
+      margin-top:0;
+      color:#ccc;
       font-size:18px;
       line-height:1.65;
     }
@@ -143,30 +144,29 @@
     }
 
     .btn{
+      min-height:52px;
+      width:fit-content;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      width:fit-content;
-      min-height:52px;
       padding:14px 24px;
       border:2px solid #ffd000;
       border-radius:50px;
       background:#ffd000;
       color:#000;
-      text-decoration:none;
-      font-weight:900;
       font-size:16px;
+      font-weight:900;
+      text-decoration:none;
       cursor:pointer;
-      transition:.25s;
     }
 
     .btn:hover{
       transform:translateY(-2px);
-      box-shadow:0 8px 24px rgba(255,208,0,.25);
+      box-shadow:0 8px 24px rgba(255,208,0,.28);
     }
 
     .btn2{
-      background:rgba(0,0,0,.25);
+      background:rgba(0,0,0,.28);
       color:#ffd000;
     }
 
@@ -178,8 +178,8 @@
     .trust-bar{
       display:flex;
       flex-wrap:wrap;
-      gap:14px 28px;
-      margin-top:30px;
+      gap:12px 28px;
+      margin-top:22px;
       color:#fff;
       font-size:16px;
       font-weight:700;
@@ -197,31 +197,36 @@
       padding:75px 25px;
     }
 
-    .section-dark{
+    .full-section{
       max-width:none;
       background:#0d0d0d;
     }
 
-    .section-dark-inner{
+    .section-inner{
       width:100%;
       max-width:1150px;
       margin:auto;
+    }
+
+    .section-intro{
+      max-width:760px;
     }
 
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(235px,1fr));
       gap:22px;
-      margin-top:30px;
+      margin-top:32px;
     }
 
     .card{
+      min-height:100%;
       padding:28px;
       background:#151515;
       border:1px solid #303030;
       border-top:5px solid #ffd000;
       border-radius:18px;
-      transition:.25s;
+      transition:.25s ease;
     }
 
     .card:hover{
@@ -229,14 +234,28 @@
       border-color:#ffd000;
     }
 
+    .card-number{
+      display:inline-flex;
+      width:42px;
+      height:42px;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:18px;
+      border-radius:50%;
+      background:#ffd000;
+      color:#000;
+      font-size:18px;
+      font-weight:900;
+    }
+
     .card h3{
-      margin-top:0;
+      margin:0 0 12px;
       color:#ffd000;
       font-size:22px;
     }
 
     .card p{
-      margin-bottom:0;
+      margin:0;
       font-size:16px;
     }
 
@@ -250,36 +269,70 @@
     .area span{
       display:inline-block;
       padding:12px 19px;
-      background:#151515;
       border:1px solid #ffd000;
       border-radius:50px;
+      background:#151515;
       font-weight:700;
     }
 
-    .contact-strip{
+    .process{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      gap:18px;
-      margin-top:30px;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+      margin-top:32px;
     }
 
-    .contact-box{
-      padding:22px;
+    .process-step{
+      position:relative;
+      padding:28px;
       background:#151515;
       border:1px solid #333;
-      border-radius:16px;
+      border-radius:18px;
     }
 
-    .contact-box strong{
-      display:block;
-      margin-bottom:8px;
+    .process-step h3{
+      margin:0 0 12px;
+      color:#ffd000;
+      font-size:21px;
+    }
+
+    .process-step p{
+      margin:0;
+      font-size:16px;
+    }
+
+    .cta{
+      max-width:none;
+      padding:60px 25px;
+      background:#ffd000;
+      color:#000;
+      text-align:center;
+    }
+
+    .cta-inner{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .cta h2{
+      margin-top:0;
+      color:#000;
+    }
+
+    .cta p{
+      max-width:760px;
+      margin:0 auto 22px;
+      color:#181818;
+    }
+
+    .cta .btn{
+      background:#000;
+      border-color:#000;
       color:#ffd000;
     }
 
-    .contact-box a{
-      color:#fff;
-      text-decoration:none;
-      overflow-wrap:anywhere;
+    .cta .btn:hover{
+      box-shadow:0 8px 24px rgba(0,0,0,.25);
     }
 
     form{
@@ -325,8 +378,34 @@
       border:none;
     }
 
+    .contact-strip{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .contact-box{
+      padding:22px;
+      background:#151515;
+      border:1px solid #333;
+      border-radius:16px;
+    }
+
+    .contact-box strong{
+      display:block;
+      margin-bottom:8px;
+      color:#ffd000;
+    }
+
+    .contact-box a{
+      color:#fff;
+      text-decoration:none;
+      overflow-wrap:anywhere;
+    }
+
     footer{
-      padding:42px 25px;
+      padding:45px 25px;
       background:#000;
       border-top:2px solid #ffd000;
       text-align:center;
@@ -344,11 +423,21 @@
       text-decoration:none;
     }
 
+    @media(max-width:900px){
+      .process{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      h1{
+        font-size:52px;
+      }
+    }
+
     @media(max-width:800px){
       header{
         flex-direction:column;
         gap:8px;
-        padding:12px 18px 16px;
+        padding:10px 18px 16px;
       }
 
       .logo img{
@@ -374,7 +463,7 @@
 
       h1{
         max-width:650px;
-        font-size:50px;
+        font-size:48px;
       }
 
       h2{
@@ -389,11 +478,11 @@
 
       .hero{
         min-height:auto;
-        padding:75px 20px;
+        padding:72px 20px;
         background:
           linear-gradient(
-            rgba(0,0,0,.82),
-            rgba(0,0,0,.75)
+            rgba(0,0,0,.84),
+            rgba(0,0,0,.78)
           ),
           url("ChatGPT%20Image%20Aug%205,%202026%20at%2009_14_53%20PM.png");
         background-size:cover;
@@ -401,7 +490,7 @@
       }
 
       h1{
-        font-size:40px;
+        font-size:39px;
         letter-spacing:-1px;
       }
 
@@ -424,12 +513,16 @@
 
       .trust-bar{
         flex-direction:column;
-        gap:11px;
+        gap:10px;
         font-size:15px;
       }
 
       section{
         padding:60px 20px;
+      }
+
+      .process{
+        grid-template-columns:1fr;
       }
 
       .form-row{
@@ -455,6 +548,7 @@
 
     <nav>
       <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
       <a href="#areas">Areas</a>
       <a href="#about">About</a>
       <a href="#quote">Quote</a>
@@ -483,7 +577,7 @@
 
         <div class="hero-buttons">
           <a class="btn" href="tel:+14049870653">
-            Call (404) 987-0653
+            Call Now: (404) 987-0653
           </a>
 
           <a class="btn btn2" href="#quote">
@@ -502,79 +596,87 @@
 
     <section id="services">
 
-      <p class="badge">Our Services</p>
+      <div class="section-intro">
+        <p class="badge">Our Services</p>
 
-      <h2>
-        Built for contractors who need dependable milling support.
-      </h2>
+        <h2>
+          Dependable milling support built around your project.
+        </h2>
 
-      <p>
-        We support paving and construction teams with professional asphalt
-        milling services for commercial, roadway, municipal, and resurfacing
-        projects.
-      </p>
+        <p>
+          We support paving and construction companies with professional
+          asphalt milling services for commercial, roadway, municipal, parking
+          lot, and resurfacing projects.
+        </p>
+      </div>
 
       <div class="grid">
 
         <div class="card">
+          <div class="card-number">01</div>
           <h3>Asphalt Milling</h3>
           <p>
             Professional milling support for paving preparation, resurfacing,
-            pavement removal, and roadway work.
+            pavement removal, rehabilitation, and roadway work.
           </p>
         </div>
 
         <div class="card">
+          <div class="card-number">02</div>
           <h3>Parking Lot Milling</h3>
           <p>
-            Milling support for shopping centers, warehouses, commercial lots,
-            apartment communities, and private properties.
+            Milling support for shopping centers, warehouses, commercial
+            properties, apartment communities, and private lots.
           </p>
         </div>
 
         <div class="card">
+          <div class="card-number">03</div>
           <h3>Roadway Projects</h3>
           <p>
             Subcontractor support for roadways, lane work, patch preparation,
-            resurfacing, and paving crews.
+            municipal projects, resurfacing, and paving crews.
           </p>
         </div>
 
         <div class="card">
+          <div class="card-number">04</div>
           <h3>Contractor Support</h3>
           <p>
             Additional milling support when your company needs dependable
-            capacity to help keep a project on schedule.
+            production capacity to help keep a project moving.
           </p>
         </div>
 
       </div>
     </section>
 
-    <section class="section-dark">
-      <div class="section-dark-inner">
+    <section id="why-us" class="full-section">
+      <div class="section-inner">
 
-        <p class="badge">Why Contractors Choose Privee</p>
+        <div class="section-intro">
+          <p class="badge">Why Contractors Choose Privee</p>
 
-        <h2>
-          Professional support built around your project.
-        </h2>
+          <h2>
+            Professional support from the first call through project completion.
+          </h2>
+        </div>
 
         <div class="grid">
 
           <div class="card">
             <h3>Dependable Scheduling</h3>
             <p>
-              We coordinate around project timelines and jobsite expectations
-              to help your paving operation stay productive.
+              We coordinate around project timelines, jobsite requirements,
+              and paving schedules to help your operation stay productive.
             </p>
           </div>
 
           <div class="card">
             <h3>Clear Communication</h3>
             <p>
-              Straightforward communication before, during, and after the work
-              helps avoid delays and confusion.
+              Straightforward updates before, during, and after the project help
+              reduce delays, confusion, and unnecessary downtime.
             </p>
           </div>
 
@@ -590,7 +692,7 @@
             <h3>Subcontractor Focus</h3>
             <p>
               Our role is to support your company, your schedule, and the
-              successful completion of your project.
+              successful completion of your paving or roadway project.
             </p>
           </div>
 
@@ -598,49 +700,117 @@
       </div>
     </section>
 
-    <section id="areas">
+    <section>
 
-      <p class="badge">Service Areas</p>
+      <div class="section-intro">
+        <p class="badge">Our Process</p>
 
-      <h2>Serving the Southeast</h2>
+        <h2>
+          A straightforward process built for contractors.
+        </h2>
+      </div>
+
+      <div class="process">
+
+        <div class="process-step">
+          <div class="card-number">1</div>
+          <h3>Send Project Details</h3>
+          <p>
+            Provide the location, square footage, milling depth, timeline, and
+            any jobsite requirements.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="card-number">2</div>
+          <h3>Review and Quote</h3>
+          <p>
+            We review the project information and follow up regarding pricing,
+            scope, scheduling, and availability.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="card-number">3</div>
+          <h3>Schedule the Work</h3>
+          <p>
+            We coordinate timing and expectations with your team before the
+            project begins.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <div class="card-number">4</div>
+          <h3>Complete the Milling</h3>
+          <p>
+            The milling work is completed with a focus on communication,
+            productivity, and supporting your project goals.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="areas" class="full-section">
+      <div class="section-inner">
+
+        <p class="badge">Service Areas</p>
+
+        <h2>Serving contractors across the Southeast.</h2>
+
+        <p>
+          Privee Milling LLC is available for asphalt milling subcontractor
+          opportunities across:
+        </p>
+
+        <div class="area">
+          <span>Georgia</span>
+          <span>Florida</span>
+          <span>Alabama</span>
+          <span>Tennessee</span>
+          <span>North Carolina</span>
+          <span>South Carolina</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about">
+
+      <p class="badge">About Us</p>
+
+      <h2>
+        Brother-owned. Contractor-focused. Built to work.
+      </h2>
 
       <p>
-        Privee Milling LLC is available for asphalt milling subcontractor
-        opportunities across:
+        Privee Milling LLC was created by brothers with a focus on dependable
+        asphalt milling subcontractor support. We understand that contractors
+        need clear communication, reliable scheduling, and teams that take
+        every project seriously.
       </p>
 
-      <div class="area">
-        <span>Georgia</span>
-        <span>Florida</span>
-        <span>Alabama</span>
-        <span>Tennessee</span>
-        <span>North Carolina</span>
-        <span>South Carolina</span>
-      </div>
+      <p>
+        From commercial parking lots to roadway milling support, our goal is
+        to help paving crews stay on schedule and deliver a clean,
+        professional result.
+      </p>
 
     </section>
 
-    <section id="about" class="section-dark">
-      <div class="section-dark-inner">
+    <section class="cta">
+      <div class="cta-inner">
 
-        <p class="badge">About Us</p>
-
-        <h2>
-          Brother-owned. Contractor-focused. Built to work.
-        </h2>
+        <h2>Need milling support for an upcoming project?</h2>
 
         <p>
-          Privee Milling LLC was created by brothers with a focus on dependable
-          asphalt milling subcontractor support. We understand that contractors
-          need clear communication, reliable scheduling, and crews that take
-          every job seriously.
+          Send us the project details or call today to discuss the location,
+          scope, depth, schedule, and availability.
         </p>
 
-        <p>
-          From commercial parking lots to roadway milling support, our goal is
-          to help paving crews stay on schedule and deliver a clean,
-          professional result.
-        </p>
+        <a class="btn" href="#quote">
+          Request Your Quote
+        </a>
 
       </div>
     </section>
@@ -652,8 +822,8 @@
       <h2>Tell us about your next milling project.</h2>
 
       <p>
-        Send us your project location, approximate square footage, milling
-        depth, timeline, and any other important job details.
+        Send your project location, approximate square footage, milling depth,
+        requested timeline, and any other important job details.
       </p>
 
       <form
@@ -765,7 +935,7 @@
     </p>
 
     <p>
-      Asphalt Milling Subcontractors
+      Professional Asphalt Milling Subcontractor Support
     </p>
 
     <p>
