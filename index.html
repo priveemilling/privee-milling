@@ -5,14 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body{margin:0;font-family:Arial;background:#050505;color:white}
-header{padding:20px;background:#000;border-bottom:2px solid #ffd000;position:sticky;top:0}
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:#000;
+border-bottom:2px solid #ffd000;
+position:sticky;
+top:0;
+z-index:1000;
+}
 .logo{
 display:flex;
 align-items:center;
 }
 
 .logo img{
-height:70px;
+height:90px;
 width:auto;
 display:block;
 }
@@ -43,7 +53,7 @@ footer{text-align:center;padding:30px;background:#000;color:#aaa}
        alt="Privee Milling LLC Logo"
        style="height:70px;">
 </div>
-<nav>
+<nav class="nav">
 <a href="#services">Services</a>
 <a href="#areas">Areas</a>
 <a href="#about">About</a>
